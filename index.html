@@ -157,11 +157,11 @@
 					if (feature.properties && feature.properties.descriptif) {
 						popupContent += feature.properties.descriptif+' </p><br>';
 					}
-					if (feature.properties && feature.properties.trace_gps) {
+					if (feature.web && feature.properties.web) {
 						popupContent += '<b>Trace GPS :</b> <a target="_blank" href='+feature.properties.trace_gps+'> fichier GPX à télécharger </a><br>';
 					}
 					if (feature.properties && feature.properties.site_web) {
-						popupContent += '<b>Plus d\'infos :</b> <a target="_blank" href="'+feature.properties.site_web+'"> Carte et détails de la randonnée </a><br>';
+						popupContent += '<b>Plus d\'infos :</b> <a target="_blank" href="'+feature.properties.site_web+'"> cliquer ici</a><br>';
 					}
 					
 					if (feature.properties && feature.properties.source) {
@@ -177,7 +177,7 @@
 				return {
 					
 					"size":15,
-					"weight": 9,
+					"weight": 4,
 					"opacity": 1,
 					"fillOpacity": 0,
 					"clickable": true
@@ -189,9 +189,7 @@
 				style: sentierStyle, 
 				onEachFeature: onEachFeature2
 			}).addTo(map);
-			
-			
-			//  fin sentiers PDIPR  -----------------------------------------------					
+									
 
 //*****************CREATION DES PICTOS************************
 			function categorieToPicto(categorie) {
